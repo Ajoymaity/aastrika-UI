@@ -5,6 +5,7 @@ import {  HttpClientModule } from '@angular/common/http'
 import { AppLoaderComponent } from './components/app-loader/app-loader.component';
 import { NoResultComponent } from './components/no-result/no-result.component';
 import { RemoveDuplicatesPipe } from './pipe/remove-duplicates.pipe';
+import { TranslateModule } from '@ngx-translate/core';
 /**
  * Core Module  
  *
@@ -14,6 +15,7 @@ import { RemoveDuplicatesPipe } from './pipe/remove-duplicates.pipe';
   imports: [
     CommonModule,
     HttpClientModule,
+    TranslateModule
   ],
   declarations: [
     AppLoaderComponent,

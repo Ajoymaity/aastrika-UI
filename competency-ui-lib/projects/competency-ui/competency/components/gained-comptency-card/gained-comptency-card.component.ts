@@ -21,10 +21,12 @@ export class GainedComptencyCardComponent implements OnInit {
   selectedDisplayLevel = -1;
   // public profileData: any
   // appLanguage: any
-  noResultData:any =  {
-    'message': 'No data to display, please take self-assessment or pass courses to see data in the passbook',
-    'messageHi': 'प्रदर्शित करने के लिए कोई डेटा नहीं है, कृपया पासबुक में डेटा देखने के लिए स्व-मूल्यांकन करें या कोर्स पास करें।'
-  }
+  noResultData:any = 'NO_DATA_DISPLAY_SELF_ASSESSMENT'
+  
+  // {
+  //   'message': 'No data to display, please take self-assessment or pass courses to see data in the passbook',
+  //   'messageHi': 'प्रदर्शित करने के लिए कोई डेटा नहीं है, कृपया पासबुक में डेटा देखने के लिए स्व-मूल्यांकन करें या कोर्स पास करें।'
+  // }
   
   constructor(
     public gainedService: GainedService,

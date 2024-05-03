@@ -23,10 +23,11 @@ export class SelfAssessmentComponent implements OnInit {
   btnType = [];
   roleBasedCompetency: any = competencyRoleData;
   roleCompetencyData = [];
-  noResultData:any = {
-    'message': 'No result found',
-    'messageHi': 'कोई परिणाम नहीं मिला'
-  }
+  noResultData:any = 'NO_RESULT_FOUND';
+  // {
+  //   'message': 'No result found',
+  //   'messageHi': 'कोई परिणाम नहीं मिला'
+  // }
   constructor(
     private location: Location,
     private selfAssessmentService: SelfAssessmentService,
