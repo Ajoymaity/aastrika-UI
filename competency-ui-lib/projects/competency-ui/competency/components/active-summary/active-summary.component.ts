@@ -34,6 +34,8 @@ export class ActiveSummaryComponent implements OnInit {
   assessmentData: any
   btnType = [];
   roleId;
+  noResultData:any = 'NO_RESULT_FOUND';
+  showNodata = false
   constructor(
     public activeSummaryService: ActiveSummaryService,
     public configService: ConfigService,
@@ -44,9 +46,13 @@ export class ActiveSummaryComponent implements OnInit {
   }
 
   ngOnInit() {
+    this.loading = true
+    if(!this.desigination){
+      this.loading = false
+      this.showNodata = true
+    }
     this.designationMap(this.desigination)
     this.getProgress()
-    this.loading = true
     this.getUserDetails().pipe(mergeMap((res: any) => {
       this.profileData = res.profileDetails.profileReq
       if(!this.language){
