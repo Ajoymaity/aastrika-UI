@@ -1,4 +1,4 @@
-import { NgModule  } from '@angular/core';
+import { CUSTOM_ELEMENTS_SCHEMA, NgModule  } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { SelfAssessmentCardComponent } from './components/self-assessment-card/self-assessment-card.component';
 import { SelfAssessmentComponent } from './components/self-assessment/self-assessment.component';
@@ -17,6 +17,7 @@ import { TranslateModule } from '@ngx-translate/core';
     CoreModule,
     TranslateModule
   ],
-  exports:[SelfAssessmentCardComponent, SelfAssessmentComponent]
+  exports:[SelfAssessmentCardComponent, SelfAssessmentComponent],
+  schemas: [CUSTOM_ELEMENTS_SCHEMA]
 })
 export class SelfAssessmentModule { }
